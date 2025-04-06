@@ -1,4 +1,4 @@
-name: My Firts Workflow de GitHub Actions
+name: My First Workflow de GitHub Actions
 
 on:
   push:
@@ -7,7 +7,6 @@ on:
   pull_request:
     branches: 
       - main
-  workflow-dispatch:
 jobs:
   imprimir_info:  
     runs-on: ubuntu-latest  
@@ -23,7 +22,7 @@ jobs:
       - name: Configurar Python
         uses: actions/setup-python@v3
         with:
-          python-version: '3.12'
+          python-version: '3.11'
 
       - name: Ejecutar script Python
         run: python mi_script.py 
